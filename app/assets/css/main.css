@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+    /* font */
+    --font-primary: 'Poppins', sans-serif;
+
+    /* color */
+    --color-primary: #FF8C5A;
+
+    --color-card-pink-border: #F8B4B4;
+    --color-card-pink-bg: #FFF0F0;
+
+    --color-card-yellow-border: #FADA8A;
+    --color-card-yellow-bg: #FFFBF0;
+
+    --color-card-green-border: #A8DCB0;
+    --color-card-green-bg: #F0FBF0;
+
+    --color-card-purple-border: #CCA8EC;
+    --color-card-purple-bg: #F8F0FF;
+
+    --color-card-blue-border: #8AC8E8;
+    --cxolor-card-blue-bg: #F0F8FF;
+
+    --color-card-orange-border: #F4A87C;
+    --color-card-orange-bg: #FFF4EE;
+}
