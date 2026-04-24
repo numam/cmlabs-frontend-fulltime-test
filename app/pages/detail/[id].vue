@@ -15,6 +15,14 @@ const { data, pending: loadingMeal } = await useAsyncData(
 // Extract meal details
 const meal = computed(() => data.value?.meals?.[0] ?? null)
 
+// title
+useHead({
+  title: computed(() => {
+    if (!meal.value?.strMeal) return 'Recipe'
+    return meal.value.strMeal
+  })
+})
+
 // Extract ingredients and measures into a structured list
 const ingredients = computed(() => {
   if (!meal.value) return []

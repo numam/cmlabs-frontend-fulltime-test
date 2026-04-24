@@ -1,4 +1,10 @@
 <script setup lang="ts">
+
+useHead({
+  title: 'Ingredients'
+})
+
+
 const { getIngredients } = useMeal()
 
 const { data: ingredientsData } = await useAsyncData('all-ingredients', () => getIngredients())

@@ -7,6 +7,14 @@ const { getCategories, getMealsByCategory } = useMeal()
 const route = useRoute()
 const activeCategory = computed(() => route.query.c as string | undefined)
 
+// Title
+useHead({
+  title: computed(() => {
+    if (!activeCategory.value) return 'Recipes'
+    return `Recipes - ${activeCategory.value}`
+  })
+})
+
 // Fetch all categories for listing 
 const { data: categoriesData } = await useAsyncData('categories', () => getCategories())
 const allCategories = computed(() => categoriesData.value?.categories ?? [])

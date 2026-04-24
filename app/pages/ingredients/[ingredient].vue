@@ -7,6 +7,13 @@ const { filterByIngredient, getIngredients } = useMeal()
 // Active category from query
 const ingredient = computed(() => route.params.ingredient as string)
 
+useHead({
+  title: computed(() => {
+    if (!ingredient.value) return 'Ingredients'
+    return `Ingredients - ${ingredient.value}`
+  })
+})
+
 // Fetch meals based on ingredient
 const { data: mealsData, pending: loadingMeals } = await useAsyncData(
   () => `meals-${ingredient.value}`,

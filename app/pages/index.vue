@@ -1,4 +1,10 @@
 <script setup lang="ts">
+
+useHead({
+  title: 'Home'
+})
+
+
 const { getIngredients, getCategories } = useMeal()
 
 // Fetch ingredients and categories from API
